@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: sz-ba-server
+  cloud:
+    config: # url规则是 uri/name/profile/label
+      uri: http://hw-topevery-dev-cloud:8100/cloud/controller/cfg #配置中心地址
+      token: 43ADCA04F04936152EF83096AB3D3CE7  # 对应header里面的x-config-token
+      # profile: @profileName@  # 用于指定文件 hw.topevery.cloud.%s.xml的%s变量值
+      profile: baoan-local  # 用于指定文件 hw.topevery.cloud.%s.xml的%s变量值
+      name: message-produce-server  # 对应配置文件中的applicationModule.code
+      label: local  # 暂时没用上
